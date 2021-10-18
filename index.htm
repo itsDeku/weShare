@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>frndlist</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-light bg-navbar-blue" id="navbar">
+    <a href="#" class="navbar-brand"><b> FRND LIST</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample04">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="http://yourbuddyxyz.000webhostapp.com/index.php">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <br>
+  <main class="container">
+    <div id="welcome_text" class="text-dark">
+      <div class="heading text-center">
+        <span class="h1">WELCOME TO THE FRIENDLIST</span>
+        <br>
+        <br>
+        <span class="lead mt-1">HERE YOU CAN SET A TEST FOR YOUR FRIENDS TO KNOW HOW MUCH THEY REALLY KNOW YOU</span>
+      </div>
+      <br>
+      <br>
+      <form action="get_data.php" method="get">
+      <!--getting name-->
+        <div class="container my-form-body text-light mb-5 py-4">
+          <label for="f-name">Enter your name here:</label>
+          <input required id="f-name" class="form-control" name="f_name" type="text" onchange="insert_name();" >
+        </div>
+      <!--changing themes-->
+        <div class="container my-form-body my-advance-options text-light">
+          <div>
+            <label for="">Theme Color</label>
+            <button id="blue-form" type="button" data-theme="blue" value="blue" onclick="theme(this,value);" style="margin-left:10px"></button>
+            <button id="red-form" type="button" data-theme="red" value="red" onclick="theme(this,value);"></button>
+            <button id="orange-form" type="button" data-theme="orange" value="orange" onclick="theme(this,value);"></button>
+            <button id="pink-form" type="button" data-theme="pink" value="pink" onclick="theme(this,value);"></button>
+            <button id="purple-form" type="button" data-theme="purple" value="purple" onclick="theme(this,value);"></button>
+            
+          </div>
+          <div>
+            <label for="">Form Color</label>
+            <button id="blue-form" type="button" value="blue" onclick="theme(this,value);" style="margin-left:20px"></button>
+            <button id="red-form" type="button" value="red" onclick="theme(this,value);"></button>
+            <button id="orange-form" type="button" value="orange" onclick="theme(this,value);"></button>
+            <button id="pink-form" type="button" value="pink" onclick="theme(this,value);"></button>
+            <button id="purple-form" type="button" value="purple" onclick="theme(this,value);"></button>
+           
+          </div>
+          
+          <div>
+            <input id="theme-color" type="hidden" name="theme-color" value="blue">
+            <input id="table_color" type="hidden" name="table_color" value="blue">
+          </div>
+          
+        </div>
+        <!--QUESTIONS-->
+        <!--question1-->
+
+        <div class="container my-form-body mt-5 text-light" id="form-body">
+          <label for="1question" class="mt-3">Question 1</label>
+          <textarea type="text" id="1question" name="1Q" class="form-control question">Pick a hobby %username% like.</textarea>
+          <div class="my-options">
+            <div class="row">
+              <div class="col-md-6 my-1">
+                <div class="custom-control custom-radio">
+                  <input id="1option1" name="1answer" type="radio" class="custom-control-input" value="option1" required>
+                  <label class="custom-control-label" for="1option1">Option 1</label>
+                </div>  
+                <textarea  rows="1" type="text" id="1option_val" name="1OP1" class="form-control mt-2" >Photography &#x1F4F7;</textarea>
+              </div>
+              <div class="col-md-6 my-1">
+                <div class="custom-control custom-radio">
+                  <input id="1option2" name="1answer" type="radio" class="custom-control-input" value="option2">
+                  <label class="custom-control-label"  for="1option2">Option 2</label>
+                </div>
+                <textarea rows="1" type="text" id="1option2_val" name="1OP2" class="form-control" >Hiking &#x26F0;</textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 my-1">
+                <div class="custom-control custom-radio">
+                  <input id="1option3" name="1answer" type="radio" class="custom-control-input" value="option3">
+                  <label class="custom-control-label"  for="1option3">Option 3</label>
+                </div>
+              <textarea  rows="1"type="text" id="1option3_val" name="1OP3" class="form-control" >Fishing &#x1F3A3;</textarea>
+              </div>
+              <div class="col-md-6 my-1 mb-4">
+                <div class="custom-control custom-radio">
+                  <input id="1option4" name="1answer" type="radio" class="custom-control-input" value="option4">
+                  <label class="custom-control-label"  for="1option4">Option 4</label>
+                </div>
+                <textarea  rows="1" type="text" id="1option4_val" name="1OP4" class="form-control" >Painting &#x1f3A8; </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--question2-->
+
+        <div class="container my-form-body mt-5 text-light" id="form-body">
+          <label for="2question" class="mt-3">Question 2</label>
+          <textarea type="text" id="2question" name="2Q" class="form-control question" value="">What is %username% eye color?</textarea>
+          <div class="my-options">
+            <div class="row">
+              <div class="col-md-6 my-1">
+                <div class="custom-control custom-radio">
+                  <input id="2option1" name="2answer" type="radio" class="custom-control-input" value="option1" required>
+                  <label class="custom-control-label" for="2option1">Option 1</label>
+                </div>  
+                <textarea rows="1" type="text" id="2option_val" name="2OP1" class="form-control mt-2" value="">blue</textarea>
+              </div>
+              <div class="col-md-6 my-1">
+                <div class="custom-control custom-radio">
+                  <input id="2option2" name="2answer" type="radio" class="custom-control-input" value="option2">
+                  <label class="custom-control-label"  for="2option2">Option 2</label>
+                </div>
+                <textarea rows="1" type="text" id="1option2_val" name="2OP2" class="form-control" value="">hazel</textarea>
+              </div>
+            
+              <div class="col-md-6 my-1">
+                <div class="custom-control custom-radio">
+                  <input id="2option3" name="2answer" type="radio" class="custom-control-input" value="option3">
+                  <label class="custom-control-label"  for="2option3">Option 3</label>
+                </div>
+              <textarea rows="1" type="text" id="2option3_val" name="2OP3" class="form-control" value="">green</textarea>
+              </div>
+              <div class="col-md-6 my-1 mb-4">
+                <div class="custom-control custom-radio">
+                  <input id="2option4" name="2answer" type="radio" class="custom-control-input" value="option4">
+                  <label class="custom-control-label"  for="2option4">Option 4</label>
+                </div>
+                <textarea rows="1" type="text" id="2option4_val" name="2OP4" class="form-control" value="">brown</textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--question3-->
+
+        <div class="container my-form-body mt-5 text-light" id="form-body">
+          <label for="3question" class="mt-3">Question 3</label>
+          <textarea type="text" id="3question" name="3Q" class="form-control question" value="">What do %username% want to do in life?</textarea>
+          <div class="my-options">
+            <div class="row">
+              <div class="col-md-6 my-1">
+                <div class="custom-control custom-radio">
+                  <input id="3option1" name="3answer" type="radio" class="custom-control-input" value="option1" required>
+                  <label class="custom-control-label" for="3option1">Option 1</label>
+                </div>  
+                <textarea rows="1"  type="text" id="3option_val" name="3OP1" class="form-control mt-2" value="">make a lot of money. &#x1f4b0;</textarea>
+              </div>
+              <div class="col-md-6 my-1">
+                <div class="custom-control custom-radio">
+                  <input id="3option2" name="3answer" type="radio" class="custom-control-input" value="option2">
+                  <label class="custom-control-label"  for="3option2">Option 2</label>
+                </div>
+                <textarea rows="1" type="text" id="3option2_val" name="3OP2" class="form-control" value="">change the world</textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 my-1">
+                <div class="custom-control custom-radio">
+                  <input id="3option3" name="3answer" type="radio" class="custom-control-input" value="option3">
+                  <label class="custom-control-label"  for="3option3">Option 3</label>
+                </div>
+              <textarea rows="1" type="text" id="3option3_val" name="3OP3" class="form-control" value="">find happiness</textarea>
+              </div>
+              <div class="col-md-6 my-1 mb-4">
+                <div class="custom-control custom-radio">
+                  <input id="3option4" name="3answer" type="radio" class="custom-control-input" value="option4">
+                  <label class="custom-control-label"  for="3option4">Option 4</label>
+                </div>
+                <textarea rows="1" type="text" id="3option4_val" name="3OP4" class="form-control" value="">i dont know</textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--question4-->
+
+        <div class="container my-form-body mt-5 text-light" id="form-body">
+          <label for="4question" class="mt-3">Question 4</label>
+          <textarea type="text" id="4question" name="4Q" class="form-control question" value="">What do %username% like to do with friends?</textarea>
+          <div class="my-options">
+            <div class="row">
+              <div class="col-md-6 my-1">
+                <div class="custom-control custom-radio">
+                  <input id="4option1" name="4answer" type="radio" class="custom-control-input" value="option1" required>
+                  <label class="custom-control-label" for="4option1">Option 1</label>
+                </div>  
+                <textarea rows="1" type="text" id="4option_val" name="4OP1" class="form-control mt-2" value="">Watch movies &#x1f3a5;</textarea>
+              </div>
+              <div class="col-md-6 my-1">
+                <div class="custom-control custom-radio">
+                  <input id="4option2" name="4answer" type="radio" class="custom-control-input" value="option2">
+                  <label class="custom-control-label"  for="4option2">Option 2</label>
+                </div>
+                <textarea rows="1" type="text" id="4option2_val" name="4OP2" class="form-control" value="">Shopping &#x1f6d2;</textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 my-1">
+                <div class="custom-control custom-radio">
+                  <input id="4option3" name="4answer" type="radio" class="custom-control-input" value="option3">
+                  <label class="custom-control-label"  for="4option3">Option 3</label>
+                </div>
+              <textarea rows="1" type="text" id="4option3_val" name="4OP3" class="form-control" value="">Have late nights &#x1f303;</textarea>
+              </div>
+              <div class="col-md-6 my-1 mb-4">
+                <div class="custom-control custom-radio">
+                  <input id="4option4" name="4answer" type="radio" class="custom-control-input" value="option4">
+                  <label class="custom-control-label"  for="4option4">Option 4</label>
+                </div>
+                <textarea rows="1" type="text" id="4option4_val" name="4OP4" class="form-control" value="">Nothing</textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--question5-->
+
+        <div class="container my-form-body mt-5 text-light" id="form-body">
+          <label for="5question" class="mt-3">Question 5</label>
+          <textarea type="text" id="5question" name="5Q" class="form-control question" value="">What is %username% favorite season?</textarea>
+          <div class="my-options">
+            <div class="row">
+              <div class="col-md-6 my-1">
+                <div class="custom-control custom-radio">
+                  <input id="5option1" name="5answer" type="radio" class="custom-control-input" value="option1" required>
+                  <label class="custom-control-label" for="5option1">Option 1</label>
+                </div>  
+                <textarea rows="1" type="text" id="5option_val" name="5OP1" class="form-control mt-2" value="">Fall &#xe119;</textarea>
+              </div>
+              <div class="col-md-6 my-1">
+                <div class="custom-control custom-radio">
+                  <input id="5option2" name="5answer" type="radio" class="custom-control-input" value="option2">
+                  <label class="custom-control-label"  for="5option2">Option 2</label>
+                </div>
+                <textarea rows="1" type="text" id="5option2_val" name="5OP2" class="form-control" value="">Winter &#x2744; </textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 my-1">
+                <div class="custom-control custom-radio">
+                  <input id="5option3" name="5answer" type="radio" class="custom-control-input" value="option3">
+                  <label class="custom-control-label"  for="5option3">Option 3</label>
+                </div>
+              <textarea rows="1" type="text" id="5option3_val" name="5OP3" class="form-control" value="">Monsoon &#127783;</textarea>
+              </div>
+              <div class="col-md-6 my-1 mb-4">
+                <div class="custom-control custom-radio">
+                  <input id="5option4" name="5answer" type="radio" class="custom-control-input " value="option4">
+                  <label class="custom-control-label"  for="5option4">Option 4</label>
+                </div>
+                <textarea rows="1" type="text" id="5option4_val" name="5OP4" class="form-control" value="">Summer &#x2600;</textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Question 6-->
+        <div class="container my-form-body mt-5 text-light" id="form-body">
+            <label for="6question" class="mt-3">Question 6</label>
+            <textarea type="text" id="6question" name="6Q" class="form-control question" value="">Which fast food restaurant does %username% prefer the most</textarea>
+            <div class="my-options">
+              <div class="row">
+                <div class="col-md-6 my-1">
+                  <div class="custom-control custom-radio">
+                    <input id="6option1" name="6answer" type="radio" class="custom-control-input" value="option1" required>
+                    <label class="custom-control-label" for="6option1">Option 1</label>
+                  </div>  
+                  <textarea rows="1" type="text" id="6option_val" name="6OP1" class="form-control mt-2" value="">Pizza Hut &#x1F355;</textarea>
+                </div>
+                <div class="col-md-6 my-1">
+                  <div class="custom-control custom-radio">
+                    <input id="6option2" name="6answer" type="radio" class="custom-control-input" value="option2">
+                    <label class="custom-control-label"  for="6option2">Option 2</label>
+                  </div>
+                  <textarea rows="1" type="text" id="6option2_val" name="6OP2" class="form-control" value="">McDonald's &#x1f354;</textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 my-1">
+                  <div class="custom-control custom-radio">
+                    <input id="6option3" name="6answer" type="radio" class="custom-control-input" value="option3">
+                    <label class="custom-control-label"  for="6option3">Option 3</label>
+                  </div>
+                <textarea rows="1" type="text" id="6option3_val" name="6OP3" class="form-control" value="">Subway &#x1F96A;</textarea>
+                </div>
+                <div class="col-md-6 my-1 mb-4">
+                  <div class="custom-control custom-radio">
+                    <input id="6option4" name="6answer" type="radio" class="custom-control-input " value="option4">
+                    <label class="custom-control-label"  for="6option4">Option 4</label>
+                  </div>
+                  <textarea rows="1" type="text" id="6option4_val" name="6OP4" class="form-control" value="">Taco Bell &#127790;</textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!--Question 7-->
+        <div class="container my-form-body mt-5 text-light" id="form-body">
+            <label for="7question" class="mt-3">Question 7</label>
+            <textarea type="text" id="7question" name="7Q" class="form-control question" value="">During which month is %username% birthday?</textarea>
+            <div class="my-options">
+              <div class="row">
+                <div class="col-md-6 my-1">
+                  <div class="custom-control custom-radio">
+                    <input id="7option1" name="7answer" type="radio" class="custom-control-input" value="option1" required>
+                    <label class="custom-control-label" for="7option1">Option 1</label>
+                  </div>  
+                  <textarea rows="1" type="text" id="7option_val" name="7OP1" class="form-control mt-2" value="">January, February, or March</textarea>
+                </div>
+                <div class="col-md-6 my-1">
+                  <div class="custom-control custom-radio">
+                    <input id="7option2" name="7answer" type="radio" class="custom-control-input" value="option2">
+                    <label class="custom-control-label"  for="7option2">Option 2</label>
+                  </div>
+                  <textarea rows="1" type="text" id="7option2_val" name="7OP2" class="form-control" value="">April, May, or June</textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 my-1">
+                  <div class="custom-control custom-radio">
+                    <input id="7option3" name="7answer" type="radio" class="custom-control-input" value="option3">
+                    <label class="custom-control-label"  for="7option3">Option 3</label>
+                  </div>
+                <textarea rows="1" type="text" id="7option3_val" name="7OP3" class="form-control" value="">July, August, or September</textarea>
+                </div>
+                <div class="col-md-6 my-1 mb-4">
+                  <div class="custom-control custom-radio">
+                    <input id="7option4" name="7answer" type="radio" class="custom-control-input " value="option4">
+                    <label class="custom-control-label"  for="7option4">Option 4</label>
+                  </div>
+                  <textarea rows="1" type="text" id="7option4_val" name="7OP4" class="form-control" value="">October, November, or December </textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!--Question 8-->
+        <div class="container my-form-body mt-5 text-light" id="form-body">
+            <label for="8question" class="mt-3">Question 8</label>
+            <textarea type="text" id="8question" name="8Q" class="form-control question" value="">When %username% is bored, what does she do?</textarea>
+            <div class="my-options">
+              <div class="row">
+                <div class="col-md-6 my-1">
+                  <div class="custom-control custom-radio">
+                    <input id="8option1" name="8answer" type="radio" class="custom-control-input" value="option1" required>
+                    <label class="custom-control-label" for="8option1">Option 1</label>
+                  </div>  
+                  <textarea rows="1" type="text" id="8option_val" name="8OP1" class="form-control mt-2" value="">Reads a book &#x1f4da;</textarea>
+                </div>
+                <div class="col-md-6 my-1">
+                  <div class="custom-control custom-radio">
+                    <input id="8option2" name="8answer" type="radio" class="custom-control-input" value="option2">
+                    <label class="custom-control-label"  for="8option2">Option 2</label>
+                  </div>
+                  <textarea rows="1" type="text" id="8option2_val" name="8OP2" class="form-control" value="">Watches a movie &#x1f3a5;</textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 my-1">
+                  <div class="custom-control custom-radio">
+                    <input id="8option3" name="8answer" type="radio" class="custom-control-input" value="option3">
+                    <label class="custom-control-label"  for="8option3">Option 3</label>
+                  </div>
+                <textarea rows="1" type="text" id="8option3_val" name="8OP3" class="form-control" value="">Calls a friend &#xe104;</textarea>
+                </div>
+                <div class="col-md-6 my-1 mb-4">
+                  <div class="custom-control custom-radio">
+                    <input id="8option4" name="8answer" type="radio" class="custom-control-input " value="option4">
+                    <label class="custom-control-label"  for="8option4">Option 4</label>
+                  </div>
+                  <textarea rows="1" type="text" id="8option4_val" name="8OP4" class="form-control" value="">Goes running  &#127939;</textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!--Question 9-->
+        <div class="container my-form-body mt-5 text-light" id="form-body">
+            <label for="9question" class="mt-3">Question 9</label>
+            <textarea type="text" id="9question" name="9Q" class="form-control question" value="">What type of movies does %username% like?</textarea>
+            <div class="my-options">
+              <div class="row">
+                <div class="col-md-6 my-1">
+                  <div class="custom-control custom-radio">
+                    <input id="9option1" name="9answer" type="radio" class="custom-control-input" value="option1" required>
+                    <label class="custom-control-label" for="9option1">Option 1</label>
+                  </div>  
+                  <textarea rows="1" type="text" id="9option_val" name="9OP1" class="form-control mt-2" value="">Horror &#57607;</textarea>
+                </div>
+                <div class="col-md-6 my-1">
+                  <div class="custom-control custom-radio">
+                    <input id="9option2" name="9answer" type="radio" class="custom-control-input" value="option2">
+                    <label class="custom-control-label"  for="9option2">Option 2</label>
+                  </div>
+                  <textarea rows="1" type="text" id="9option2_val" name="9OP2" class="form-control" value="">Comedy &#x1f923;</textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 my-1">
+                  <div class="custom-control custom-radio">
+                    <input id="9option3" name="9answer" type="radio" class="custom-control-input" value="option3">
+                    <label class="custom-control-label"  for="9option3">Option 3</label>
+                  </div>
+                <textarea rows="1" type="text" id="9option3_val" name="9OP3" class="form-control" value="">Fantasy</textarea>
+                </div>
+                <div class="col-md-6 my-1 mb-4">
+                  <div class="custom-control custom-radio">
+                    <input id="9option4" name="9answer" type="radio" class="custom-control-input " value="option4">
+                    <label class="custom-control-label"  for="9option4">Option 4</label>
+                  </div>
+                  <textarea rows="1" type="text" id="9option4_val" name="9OP4" class="form-control" value="">Romance &#x1f491;</textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!--Question 10-->
+        <div class="container my-form-body mt-5 text-light" id="form-body">
+            <label for="10question" class="mt-3">Question 10</label>
+            <textarea type="text" id="10question" name="10Q" class="form-control question" value="">What's %username% favorite sport?</textarea>
+            <div class="my-options">
+              <div class="row">
+                <div class="col-md-6 my-1">
+                  <div class="custom-control custom-radio">
+                    <input id="10option1" name="10answer" type="radio" class="custom-control-input" value="option1" required>
+                    <label class="custom-control-label" for="10option1">Option 1</label>
+                  </div>  
+                  <textarea rows="1" type="text" id="10option_val" name="10OP1" class="form-control mt-2" value="">Hockey &#x1f3d2;</textarea>
+                </div>
+                <div class="col-md-6 my-1">
+                  <div class="custom-control custom-radio">
+                    <input id="10option2" name="10answer" type="radio" class="custom-control-input" value="option2">
+                    <label class="custom-control-label"  for="10option2">Option 2</label>
+                  </div>
+                  <textarea rows="1" type="text" id="10option2_val" name="10OP2" class="form-control" value="">Football &#x1f3c8;</textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 my-1">
+                  <div class="custom-control custom-radio">
+                    <input id="10option3" name="10answer" type="radio" class="custom-control-input" value="option3">
+                    <label class="custom-control-label"  for="10option3">Option 3</label>
+                  </div>
+                <textarea rows="1" type="text" id="10option3_val" name="10OP3" class="form-control" value="">Basketball &#xe42a;</textarea>
+                </div>
+                <div class="col-md-6 my-1 mb-4">
+                  <div class="custom-control custom-radio">
+                    <input id="10option4" name="10answer" type="radio" class="custom-control-input " value="option4">
+                    <label class="custom-control-label"  for="10option4">Option 4</label>
+                  </div>
+                  <textarea rows="1" type="text" id="10option4_val" name="10OP4" class="form-control" value="">Cricket &#x1F997;</textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container"></div>
+        <span class="my-submit-btn"><button class="btn btn-block btn-warning my-5" style="width: 80%; margin-left: 10%;" type="submit">generate link</button></span>
+      </form>
+    </div>
+  </main>
+  <br>
+  <footer>
+    <div class="footer-copyright text-center py-3 bg-navbar-blue" id="footer">© 2020 Copyright:
+      <a href="https://yourbuddyxyz.000webapphost.com/">yourbuddyxyz.com</a>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+<script>
+  
+  function theme(my,value) {
+    //sending the variables
+    var background_color, navbar_color, table_color;
+    //opening where the data is to send
+
+    var theme_col = document.getElementById('theme-color');
+    var form_col = document.getElementById('table_color');
+    //getting the data
+    var theme = my.getAttribute('data-theme');
+    var navbar = my.getAttribute('data-theme');
+    elements = document.getElementsByClassName('my-form-body');
+    var get_text = document.getElementById('welcome_text');
+    var nav_color = document.getElementById('navbar');
+    var footer_color = document.getElementById('footer');
+    //for background
+    for (var i = 0; i < elements.length; i++) {
+      if(value=="blue"){
+        elements[i].style.backgroundColor="#1976D2";        
+        form_col.value = "blue";
+      }
+      if(value=="red"){
+        elements[i].style.backgroundColor="#D32F2F";        
+        form_col.value = "red";
+      }
+      if(value=="orange"){
+        elements[i].style.backgroundColor="#F57C00";
+        form_col.value = "orange";
+      }
+      if(value=="pink"){
+        elements[i].style.backgroundColor="#C2185B";
+        form_col.value = "pink";
+      }
+      if(value=="purple"){
+        elements[i].style.backgroundColor="#7B1FA2";
+        form_col.value = "purple";
+      }
+      
+    }
+    if(theme=="blue"){
+      nav_color.className = "navbar navbar-expand-md navbar-light bg-navbar-blue";
+      footer_color.className = "footer-copyright text-center py-3 bg-navbar-blue";
+      document.body.style.background = "#BBDEFB";
+      get_text.style= "color: #131313 !important;";
+      theme_col.value = "blue";
+    }
+    if(theme=="red"){
+      nav_color.className = "navbar navbar-expand-md navbar-light bg-navbar-red";
+      footer_color.className = "footer-copyright text-center py-3 bg-navbar-red";
+      document.body.style.background = "#FFCDD2";
+      get_text.style= "color: #131313 !important;";
+      theme_col.value = "red";
+    }
+    if(theme=="orange"){
+      nav_color.className = "navbar navbar-expand-md navbar-light bg-navbar-orange";
+      footer_color.className = "footer-copyright text-center py-3 bg-navbar-orange";
+      document.body.style.background = "#FFE0B2";
+      get_text.style= "color: #131313 !important;";
+      theme_col.value = "orange";
+    }
+    if(theme=="pink"){
+      nav_color.className = "navbar navbar-expand-md navbar-light bg-navbar-pink";
+      footer_color.className = "footer-copyright text-center py-3 bg-navbar-pink";
+      document.body.style.background = "#F8BBD0";
+      get_text.style= "color: #131313 !important;";
+      theme_col.value = "pink";
+    }
+    if(theme=="purple"){
+      nav_color.className = "navbar navbar-expand-md navbar-light bg-navbar-purple";
+      footer_color.className = "footer-copyright text-center py-3 bg-navbar-purple";
+      document.body.style.background = "#E1BEE7";
+      get_text.style= "color: #131313 !important;";
+      theme_col.value = "purple";
+    }
+    //for the question forms
+    
+  }
+
+  var temp_name = "%username%";
+
+  function insert_name() {
+  var user_name = document.getElementById("f-name");
+  var ques = document.getElementsByClassName("question");
+  for(i=0;i<=9;i++){
+    var news = ques[i].value.replace(temp_name,user_name.value);
+    ques[i].value = news;
+  }
+  temp_name = user_name.value;
+  }
+</script>
+</html>

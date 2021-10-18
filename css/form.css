@@ -1,0 +1,69 @@
+body{
+  background-color: #BBDEFB ;
+}
+.bg-navbar-light{
+  background-color: #E040FB !important;
+}
+.my-form-body{
+  position: relative;
+  width: 98%;
+  height: 100%;
+  background-color: #1976D2;
+  border-radius: 5px;
+}
+
+.my-advance-options button[type='button']{
+  margin: 15px 5px 5px 0 ;
+  width: 15px;
+  height: 15px;
+  border: none;
+  border-radius: 15px;
+}
+.bg-navbar-blue{
+  background-color: #2196F3;
+}
+.blue-background{
+  background-color: #BBDEFB;
+}
+
+/*theme-colors*/
+#blue-theme, #blue-background, #blue-form, .bg-navbar-blue{
+  background-color: #2196F3;
+}
+#red-theme, #red-background, #red-form, .bg-navbar-red{
+  background-color:#F44336;
+}
+#orange-theme, #orange-background, #orange-form, .bg-navbar-orange{
+  background-color: #FF9800;
+}
+#pink-theme, #pink-background, #pink-form, .bg-navbar-pink{
+  background-color: #E91E63;
+}
+#purple-theme, #purple-background, #purple-form, .bg-navbar-purple{
+  background-color: #9C27B0;
+}
+#dark-theme, #dark-background, #dark-form, .bg-navbar-dark{
+  background-color: #343a40;
+}
+
+
+
+.my-form-body input[type='radio']{
+  position: absolute;
+  top: 1px;
+  margin: 50px 0  0 30px ;
+  right: 1px;  
+}
+.my-form-body .custom-radio .custom-control-input:checked~.custom-control-label::before {
+  background-color: #3bf13b !important;
+}
+.custom-control-label::before{
+  background-color: white;
+}
+.radio input[type="radio"],.radio-inline input[type="radio"]{
+  float: left;
+  margin-left: -20px ;
+}
+.custom-radio .custom-control-input:indeterminate~.custom-control-label::before {
+  background-color: #ffffff;
+}
