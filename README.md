@@ -2,6 +2,7 @@
 FRNDLIST(weShare) is a quiz creation platform that allows users to create custom quiz and share it to there friends.
 <br/>
 FRNDLIST is fully reposnsive site that support tablet, Smart Phone, Desktop.
+<br/>
 <a href="https://yourbuddyxyz.000webhostapp.com/weShare/">Check out my Site</a>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/70664666/137780491-0e4dca85-9c0f-4216-8b11-fd7f850f7360.png" width="50%" height="50%" />
