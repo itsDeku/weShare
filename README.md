@@ -1,11 +1,10 @@
 # weShare
 weShare is a quiz creation platform that allows users to create custom quiz and share it to there friends.
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/70664666/137780485-cf8fe17e-c7c7-40b6-a317-1c782672d79c.png" width="50%" height="50%" />
-</p>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/70664666/137780491-0e4dca85-9c0f-4216-8b11-fd7f850f7360.png" width="50%" height="50%" />
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/70664666/137780485-cf8fe17e-c7c7-40b6-a317-1c782672d79c.png" width="50%" height="50%" />
 </p>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/70664666/137780495-391225ec-2a4a-4e5e-8f52-04b4836523f4.png" width="50%" height="50%" />
@@ -40,7 +39,5 @@ weShare is a quiz creation platform that allows users to create custom quiz and 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/70664666/137780592-c302d703-8c99-4694-a911-c8dff35d5e1a.png" width="50%" height="50%" />
 </p>
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/70664666/137780595-67de9fc4-fec8-4704-8d90-85908a366132.png" width="50%" height="50%" />
-</p>
+
 
