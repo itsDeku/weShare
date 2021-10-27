@@ -36,8 +36,6 @@ weShare is a quiz creation platform that allows users to create custom quiz and 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/70664666/137780586-23181bc0-9c03-46da-be59-1481e8b00591.png" width="50%" height="50%" />
 </p>
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/70664666/137780592-c302d703-8c99-4694-a911-c8dff35d5e1a.png" width="50%" height="50%" />
-</p>
+
 
 
